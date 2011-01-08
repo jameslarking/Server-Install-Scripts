@@ -3,6 +3,8 @@ yum install httpd
 yum install mysql-server
 yum install php
 yum install php-devel
+yum install php-pear
+#pear install DB
 chkconfig --level 3 mysqld on
 chkconfig --level 3 httpd on
 
