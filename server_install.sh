@@ -19,6 +19,9 @@ cp 1-default.conf /etc/httpd/sites-enabled/
 cd /var/sites/1-default
 git pull origin master
 
+
+cp php.d/*.ini /etc/php.d/
+
 /etc/init.d/httpd restart
 
 #cat /dev/urandom | base64 | head -c8
