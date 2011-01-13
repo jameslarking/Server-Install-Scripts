@@ -17,7 +17,7 @@ if [ ! -d "/etc/httpd/sites-enabled" ]; then
 	fi	
 fi
 cp 1-default.conf /etc/httpd/sites-enabled/
-
+cp httpd.amends.conf /etc/httpd/conf.d/
 cp php.d/*.ini /etc/php.d/
 
 
