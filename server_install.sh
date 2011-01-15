@@ -33,7 +33,8 @@ git clone  git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin
 cd /var/www/phpmyadmin/
 git checkout origin/STABLE
 git pull
-chown -R ec2-user /var 
+chown -R ec2-user /var/www
+chown -R ec2-user /var/sites
 
 /etc/init.d/httpd restart
 /etc/init.d/mysql restart
