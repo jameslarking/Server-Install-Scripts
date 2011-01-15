@@ -5,6 +5,9 @@ yum install php
 yum install php-devel
 yum install php-pear
 yum install php-mysql
+yum install php-mbstring
+yum install php-mcrypt
+
 #pear install DB
 chkconfig --level 3 mysqld on
 chkconfig --level 3 httpd on
@@ -25,11 +28,11 @@ cp php.d/*.ini /etc/php.d/
 cd /var/sites/1-default
 git pull origin master
 
-cd /var/
+cd /var/www/
 git clone  git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin
-cd /var/phpmyadmin/
-git pull origin master
-
+cd /var/www/phpmyadmin/
+git checkout origin/STABLE
+git pull
 chown -R ec2-user /var 
 
 /etc/init.d/httpd restart
