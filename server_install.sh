@@ -37,4 +37,4 @@ chown -R ec2-user /var/www
 chown -R ec2-user /var/sites
 
 /etc/init.d/httpd restart
-/etc/init.d/mysql restart
+/etc/init.d/mysqld restart
