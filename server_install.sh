@@ -25,8 +25,12 @@ cp php.d/*.ini /etc/php.d/
 cd /var/sites/1-default
 git pull origin master
 
+cd /var/
+git clone  git://phpmyadmin.git.sourceforge.net/gitroot/phpmyadmin/phpmyadmin
+cd /var/phpmyadmin/
+git pull origin master
 
+chown -R ec2-user /var 
 
 /etc/init.d/httpd restart
-
-#cat /dev/urandom | base64 | head -c8
+/etc/init.d/mysql restart
