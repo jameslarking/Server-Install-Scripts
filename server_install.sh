@@ -42,7 +42,7 @@ chown -R ec2-user /var/sites
 
 yum remove sendmail -y
 yum install postfix -y
-postconf -e relayhost = 82.165.197.84:2525
+postconf -e relayhost = "82.165.197.84:2525"
 postconf -e smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 postconf -e smtp_sasl_mechanism_filter = PLAIN, LOGIN
 postconf -e smtp_sasl_auth_enable = yes
