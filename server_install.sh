@@ -1,16 +1,20 @@
 yum update
-yum install httpd
+yum install httpd -y
 yum install mysql-server
-yum install php
-yum install php-devel
-yum install php-pear
-yum install php-mysql
-yum install php-mbstring
-yum install php-mcrypt
+yum install php -y
+yum install php-devel -y
+yum install php-pear -y
+yum install php-mysql -y
+yum install php-mbstring -y
+yum install php-mcrypt -y
+yum install munin -y
+yum install munin-node -y
 
 #pear install DB
 chkconfig --level 3 mysqld on
 chkconfig --level 3 httpd on
+chkconfig --levels 235 munin-node on
+/etc/init.d/munin-node start
 
 if [ ! -d "/etc/httpd/sites-enabled" ]; then
 	mkdir /etc/httpd/sites-enabled
