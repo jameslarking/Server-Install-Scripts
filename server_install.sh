@@ -9,6 +9,9 @@ yum install php-mbstring -y
 yum install php-mcrypt -y
 yum install munin -y
 yum install munin-node -y
+yum install gcc -y
+yum install make -y
+sudo pecl install mongo
 
 #pear install DB
 chkconfig --level 3 mysqld on
