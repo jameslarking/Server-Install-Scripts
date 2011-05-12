@@ -7,8 +7,8 @@ yum install php-pear -y
 yum install php-mysql -y
 yum install php-mbstring -y
 yum install php-mcrypt -y
-yum install munin -y
-yum install munin-node -y
+yum install munin
+yum install munin-node 
 yum install gcc -y
 yum install make -y
 sudo pecl install mongo
@@ -16,8 +16,9 @@ sudo pecl install mongo
 #pear install DB
 chkconfig --level 3 mysqld on
 chkconfig --level 3 httpd on
-chkconfig --levels 235 munin-node on
-/etc/init.d/munin-node start
+
+#chkconfig --levels 235 munin-node on
+#/etc/init.d/munin-node start
 
 if [ ! -d "/etc/httpd/sites-enabled" ]; then
 	mkdir /etc/httpd/sites-enabled
