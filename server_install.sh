@@ -7,11 +7,15 @@ yum install php-pear -y
 yum install php-mysql -y
 yum install php-mbstring -y
 yum install php-mcrypt -y
-yum install munin
-yum install munin-node 
+#yum install munin
+#yum install munin-node 
 yum install gcc -y
 yum install make -y
 sudo pecl install mongo
+
+pear channel-discover pear.amazonwebservices.com
+pear install aws/sdk
+
 
 #pear install DB
 chkconfig --level 3 mysqld on
