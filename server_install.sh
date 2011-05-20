@@ -7,6 +7,7 @@ yum install php-pear -y
 yum install php-mysql -y
 yum install php-mbstring -y
 yum install php-mcrypt -y
+yum install php-gd -y
 #yum install munin
 #yum install munin-node 
 yum install gcc -y
